@@ -1,0 +1,27 @@
+<html>
+    <head>
+    	<title>Week 1</title>
+    	<link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/boostrap.min.css">
+    	<link rel="stylesheet" href="../css/style.css">
+
+    	</head>
+    	<body>
+    		<center>
+    		<div class="container">
+    		<% @tweets.each do |tweet| %>
+				<h1><%=tweet.user%> - <%= tweet.message %> </h1>
+
+			<% end %>
+			
+			<form action="/tweets" method ="POST">
+				User: <input type="text" name="user">
+				Message: <input type="text" name="message" maxlength ="141"> 
+
+				<input type="submit">
+			</form>
+		</center>
+	</div>
+   </body>
+  </html>	
+
+
